@@ -3,7 +3,7 @@
 // DO NOT EDIT!
 
 /*
-Package transit-realtime is a generated protocol buffer package.
+Package transit_realtime is a generated protocol buffer package.
 
 It is generated from these files:
 	gtfs-realtime.proto
@@ -22,7 +22,7 @@ It has these top-level messages:
 	EntitySelector
 	TranslatedString
 */
-package transit-realtime
+package transit_realtime
 
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
@@ -522,7 +522,7 @@ type FeedHeader struct {
 	// Version of the feed specification.
 	// The current version is 1.0.
 	GtfsRealtimeVersion *string                    `protobuf:"bytes,1,req,name=gtfs_realtime_version" json:"gtfs_realtime_version,omitempty"`
-	Incrementality      *FeedHeader_Incrementality `protobuf:"varint,2,opt,name=incrementality,enum=transit-realtime.FeedHeader_Incrementality,def=0" json:"incrementality,omitempty"`
+	Incrementality      *FeedHeader_Incrementality `protobuf:"varint,2,opt,name=incrementality,enum=transit_realtime.FeedHeader_Incrementality,def=0" json:"incrementality,omitempty"`
 	// This timestamp identifies the moment when the content of this feed has been
 	// created (in server time). In POSIX time (i.e., number of seconds since
 	// January 1st 1970 00:00:00 UTC).
@@ -869,7 +869,7 @@ type TripUpdate_StopTimeUpdate struct {
 	StopId               *string                                         `protobuf:"bytes,4,opt,name=stop_id" json:"stop_id,omitempty"`
 	Arrival              *TripUpdate_StopTimeEvent                       `protobuf:"bytes,2,opt,name=arrival" json:"arrival,omitempty"`
 	Departure            *TripUpdate_StopTimeEvent                       `protobuf:"bytes,3,opt,name=departure" json:"departure,omitempty"`
-	ScheduleRelationship *TripUpdate_StopTimeUpdate_ScheduleRelationship `protobuf:"varint,5,opt,name=schedule_relationship,enum=transit-realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship,def=0" json:"schedule_relationship,omitempty"`
+	ScheduleRelationship *TripUpdate_StopTimeUpdate_ScheduleRelationship `protobuf:"varint,5,opt,name=schedule_relationship,enum=transit_realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship,def=0" json:"schedule_relationship,omitempty"`
 	XXX_extensions       map[int32]proto.Extension                       `json:"-"`
 	XXX_unrecognized     []byte                                          `json:"-"`
 }
@@ -950,12 +950,12 @@ type VehiclePosition struct {
 	StopId *string `protobuf:"bytes,7,opt,name=stop_id" json:"stop_id,omitempty"`
 	// The exact status of the vehicle with respect to the current stop.
 	// Ignored if current_stop_sequence is missing.
-	CurrentStatus *VehiclePosition_VehicleStopStatus `protobuf:"varint,4,opt,name=current_status,enum=transit-realtime.VehiclePosition_VehicleStopStatus,def=2" json:"current_status,omitempty"`
+	CurrentStatus *VehiclePosition_VehicleStopStatus `protobuf:"varint,4,opt,name=current_status,enum=transit_realtime.VehiclePosition_VehicleStopStatus,def=2" json:"current_status,omitempty"`
 	// Moment at which the vehicle's position was measured. In POSIX time
 	// (i.e., number of seconds since January 1st 1970 00:00:00 UTC).
 	Timestamp        *uint64                          `protobuf:"varint,5,opt,name=timestamp" json:"timestamp,omitempty"`
-	CongestionLevel  *VehiclePosition_CongestionLevel `protobuf:"varint,6,opt,name=congestion_level,enum=transit-realtime.VehiclePosition_CongestionLevel" json:"congestion_level,omitempty"`
-	OccupancyStatus  *VehiclePosition_OccupancyStatus `protobuf:"varint,9,opt,name=occupancy_status,enum=transit-realtime.VehiclePosition_OccupancyStatus" json:"occupancy_status,omitempty"`
+	CongestionLevel  *VehiclePosition_CongestionLevel `protobuf:"varint,6,opt,name=congestion_level,enum=transit_realtime.VehiclePosition_CongestionLevel" json:"congestion_level,omitempty"`
+	OccupancyStatus  *VehiclePosition_OccupancyStatus `protobuf:"varint,9,opt,name=occupancy_status,enum=transit_realtime.VehiclePosition_OccupancyStatus" json:"occupancy_status,omitempty"`
 	XXX_extensions   map[int32]proto.Extension        `json:"-"`
 	XXX_unrecognized []byte                           `json:"-"`
 }
@@ -1052,8 +1052,8 @@ type Alert struct {
 	ActivePeriod []*TimeRange `protobuf:"bytes,1,rep,name=active_period" json:"active_period,omitempty"`
 	// Entities whose users we should notify of this alert.
 	InformedEntity []*EntitySelector `protobuf:"bytes,5,rep,name=informed_entity" json:"informed_entity,omitempty"`
-	Cause          *Alert_Cause      `protobuf:"varint,6,opt,name=cause,enum=transit-realtime.Alert_Cause,def=1" json:"cause,omitempty"`
-	Effect         *Alert_Effect     `protobuf:"varint,7,opt,name=effect,enum=transit-realtime.Alert_Effect,def=8" json:"effect,omitempty"`
+	Cause          *Alert_Cause      `protobuf:"varint,6,opt,name=cause,enum=transit_realtime.Alert_Cause,def=1" json:"cause,omitempty"`
+	Effect         *Alert_Effect     `protobuf:"varint,7,opt,name=effect,enum=transit_realtime.Alert_Effect,def=8" json:"effect,omitempty"`
 	// The URL which provides additional information about the alert.
 	Url *TranslatedString `protobuf:"bytes,8,opt,name=url" json:"url,omitempty"`
 	// Alert header. Contains a short summary of the alert text as plain-text.
@@ -1307,7 +1307,7 @@ type TripDescriptor struct {
 	// related to schedule anymore.
 	// In YYYYMMDD format.
 	StartDate            *string                              `protobuf:"bytes,3,opt,name=start_date" json:"start_date,omitempty"`
-	ScheduleRelationship *TripDescriptor_ScheduleRelationship `protobuf:"varint,4,opt,name=schedule_relationship,enum=transit-realtime.TripDescriptor_ScheduleRelationship" json:"schedule_relationship,omitempty"`
+	ScheduleRelationship *TripDescriptor_ScheduleRelationship `protobuf:"varint,4,opt,name=schedule_relationship,enum=transit_realtime.TripDescriptor_ScheduleRelationship" json:"schedule_relationship,omitempty"`
 	XXX_extensions       map[int32]proto.Extension            `json:"-"`
 	XXX_unrecognized     []byte                               `json:"-"`
 }
@@ -1588,29 +1588,29 @@ func (m *TranslatedString_Translation) GetLanguage() string {
 }
 
 func init() {
-	proto.RegisterType((*FeedMessage)(nil), "transit-realtime.FeedMessage")
-	proto.RegisterType((*FeedHeader)(nil), "transit-realtime.FeedHeader")
-	proto.RegisterType((*FeedEntity)(nil), "transit-realtime.FeedEntity")
-	proto.RegisterType((*TripUpdate)(nil), "transit-realtime.TripUpdate")
-	proto.RegisterType((*TripUpdate_StopTimeEvent)(nil), "transit-realtime.TripUpdate.StopTimeEvent")
-	proto.RegisterType((*TripUpdate_StopTimeUpdate)(nil), "transit-realtime.TripUpdate.StopTimeUpdate")
-	proto.RegisterType((*VehiclePosition)(nil), "transit-realtime.VehiclePosition")
-	proto.RegisterType((*Alert)(nil), "transit-realtime.Alert")
-	proto.RegisterType((*TimeRange)(nil), "transit-realtime.TimeRange")
-	proto.RegisterType((*Position)(nil), "transit-realtime.Position")
-	proto.RegisterType((*TripDescriptor)(nil), "transit-realtime.TripDescriptor")
-	proto.RegisterType((*VehicleDescriptor)(nil), "transit-realtime.VehicleDescriptor")
-	proto.RegisterType((*EntitySelector)(nil), "transit-realtime.EntitySelector")
-	proto.RegisterType((*TranslatedString)(nil), "transit-realtime.TranslatedString")
-	proto.RegisterType((*TranslatedString_Translation)(nil), "transit-realtime.TranslatedString.Translation")
-	proto.RegisterEnum("transit-realtime.FeedHeader_Incrementality", FeedHeader_Incrementality_name, FeedHeader_Incrementality_value)
-	proto.RegisterEnum("transit-realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship", TripUpdate_StopTimeUpdate_ScheduleRelationship_name, TripUpdate_StopTimeUpdate_ScheduleRelationship_value)
-	proto.RegisterEnum("transit-realtime.VehiclePosition_VehicleStopStatus", VehiclePosition_VehicleStopStatus_name, VehiclePosition_VehicleStopStatus_value)
-	proto.RegisterEnum("transit-realtime.VehiclePosition_CongestionLevel", VehiclePosition_CongestionLevel_name, VehiclePosition_CongestionLevel_value)
-	proto.RegisterEnum("transit-realtime.VehiclePosition_OccupancyStatus", VehiclePosition_OccupancyStatus_name, VehiclePosition_OccupancyStatus_value)
-	proto.RegisterEnum("transit-realtime.Alert_Cause", Alert_Cause_name, Alert_Cause_value)
-	proto.RegisterEnum("transit-realtime.Alert_Effect", Alert_Effect_name, Alert_Effect_value)
-	proto.RegisterEnum("transit-realtime.TripDescriptor_ScheduleRelationship", TripDescriptor_ScheduleRelationship_name, TripDescriptor_ScheduleRelationship_value)
+	proto.RegisterType((*FeedMessage)(nil), "transit_realtime.FeedMessage")
+	proto.RegisterType((*FeedHeader)(nil), "transit_realtime.FeedHeader")
+	proto.RegisterType((*FeedEntity)(nil), "transit_realtime.FeedEntity")
+	proto.RegisterType((*TripUpdate)(nil), "transit_realtime.TripUpdate")
+	proto.RegisterType((*TripUpdate_StopTimeEvent)(nil), "transit_realtime.TripUpdate.StopTimeEvent")
+	proto.RegisterType((*TripUpdate_StopTimeUpdate)(nil), "transit_realtime.TripUpdate.StopTimeUpdate")
+	proto.RegisterType((*VehiclePosition)(nil), "transit_realtime.VehiclePosition")
+	proto.RegisterType((*Alert)(nil), "transit_realtime.Alert")
+	proto.RegisterType((*TimeRange)(nil), "transit_realtime.TimeRange")
+	proto.RegisterType((*Position)(nil), "transit_realtime.Position")
+	proto.RegisterType((*TripDescriptor)(nil), "transit_realtime.TripDescriptor")
+	proto.RegisterType((*VehicleDescriptor)(nil), "transit_realtime.VehicleDescriptor")
+	proto.RegisterType((*EntitySelector)(nil), "transit_realtime.EntitySelector")
+	proto.RegisterType((*TranslatedString)(nil), "transit_realtime.TranslatedString")
+	proto.RegisterType((*TranslatedString_Translation)(nil), "transit_realtime.TranslatedString.Translation")
+	proto.RegisterEnum("transit_realtime.FeedHeader_Incrementality", FeedHeader_Incrementality_name, FeedHeader_Incrementality_value)
+	proto.RegisterEnum("transit_realtime.TripUpdate_StopTimeUpdate_ScheduleRelationship", TripUpdate_StopTimeUpdate_ScheduleRelationship_name, TripUpdate_StopTimeUpdate_ScheduleRelationship_value)
+	proto.RegisterEnum("transit_realtime.VehiclePosition_VehicleStopStatus", VehiclePosition_VehicleStopStatus_name, VehiclePosition_VehicleStopStatus_value)
+	proto.RegisterEnum("transit_realtime.VehiclePosition_CongestionLevel", VehiclePosition_CongestionLevel_name, VehiclePosition_CongestionLevel_value)
+	proto.RegisterEnum("transit_realtime.VehiclePosition_OccupancyStatus", VehiclePosition_OccupancyStatus_name, VehiclePosition_OccupancyStatus_value)
+	proto.RegisterEnum("transit_realtime.Alert_Cause", Alert_Cause_name, Alert_Cause_value)
+	proto.RegisterEnum("transit_realtime.Alert_Effect", Alert_Effect_name, Alert_Effect_value)
+	proto.RegisterEnum("transit_realtime.TripDescriptor_ScheduleRelationship", TripDescriptor_ScheduleRelationship_name, TripDescriptor_ScheduleRelationship_value)
 }
 
 var fileDescriptor0 = []byte{
